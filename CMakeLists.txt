@@ -64,10 +64,12 @@ target_link_libraries(${BIN_TARGET} PRIVATE
 )
 
 set(TARGET_PLATFORM host CACHE STRING "Target platform")
-set_property(CACHE TARGET_PLATFORM PROPERTY STRINGS host retrofw gcw0 rg350 miyoo)
+set_property(CACHE TARGET_PLATFORM PROPERTY STRINGS host retrofw gcw0 rg350 miyoo miyoomini)
 
 if(TARGET_PLATFORM STREQUAL "retrofw")
   include(CMake/retrofw_defs.cmake)
+elseif(TARGET_PLATFORM STREQUAL "miyoomini")
+  include(CMake/miyoomini_defs.cmake)
 elseif(TARGET_PLATFORM STREQUAL "gcw0")
   include(CMake/rg350_defs.cmake)
 elseif(TARGET_PLATFORM STREQUAL "rg350")

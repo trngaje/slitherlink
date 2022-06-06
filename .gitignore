@@ -1,3 +1,4 @@
+*.bak
 *.o
 .DS_Store
 slitherlink
@@ -5,3 +6,7 @@ slitherlink.sav
 /build/
 /build-*/
 nbproject/**
+/CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
